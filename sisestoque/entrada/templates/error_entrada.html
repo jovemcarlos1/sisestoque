@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block product %}
+  {% if error %}
+    <div class="alert alert-danger">
+      {{ error }}
+    </div>
+  {% endif %}
+{% endblock %}

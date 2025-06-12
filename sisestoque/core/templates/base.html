@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/a49a7d283e.js" crossorigin="anonymous"></script>
+    <title>SisEstoque</title>
+</head>
+
+<body>
+    <h1 class="title">SisEstoque</h1>
+    <!-- <a href="{% url 'produto:list_produto' %}">Produtos</a> -->
+    <!-- <a href="{% url 'entrada:list_entrada' %}">Entradas</a>
+    <a href="{% url 'saida:list_saida' %}">Saídas</a> -->
+    <div class="tabs is-toggle">
+      <ul>
+        <li class="is-active">
+          <a href="{% url 'produto:list_produto' %}">
+            <span class="icon is-small">
+              <i class="fa-solid fa-home"></i>
+            </span>
+            <span>Produtos</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'entrada:list_entrada' %}">
+            <span class="icon is-small">
+              <i class="fa-solid fa-paste"></i>
+            </span>
+            <span>Entradas</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'saida:list_saida' %}">
+            <span class="icon is-small">
+              <i class="fa-solid fa-dolly"></i>
+            </span>
+            <span>Saídas</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    {% block product %}{% endblock %}
+    <script src="https://example.com/fontawesome/v6.6.0/js/fontawesome.js" data-auto-replace-svg="nest"></script>
+    <script src="https://example.com/fontawesome/v6.6.0/js/solid.js"></script>
+    <script src="https://example.com/fontawesome/v6.6.0/js/brands.js"></script>
+</body>
+
+</html>
+
