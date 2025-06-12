@@ -17,11 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core.views import index
+from django.views.generic.base import RedirectView
+
 
 urlpatterns = [
     path('', index, name = 'index'),
     path('admin/', admin.site.urls),
     path('produto/', include('produto.urls', namespace='produto')),
     path('entrada/', include('entrada.urls', namespace='entrada')),
-    path('saida/', include('saida.urls', namespace='saida'))
+    path('saida/', include('saida.urls', namespace='saida')),
+    path('favicon.ico', RedirectView.as_view(url='/static/images/favicon.ico', permanent = True))
+
 ]
