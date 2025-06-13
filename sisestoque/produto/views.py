@@ -11,7 +11,10 @@ def list_produto(request):
 def new_produto(request): 
     if request.method == 'POST': 
         form = ProdutoForm(request.POST) 
-        if form.is_valid(): 
+        if form.is_valid():
+            if form.cleaned_data['preco'] <= 0:
+                form.add_error('preco', 'Insira apenas valores positivos maiores que zero.')
+                return render(request, 'new_produto.html', {'form': form}) 
             form.save() 
             return redirect('index') 
     else:     
@@ -24,7 +27,10 @@ def update_produto(request, pk):
     produto = Produtos.objects.get(pk=pk) 
     if request.method == 'POST': 
         form = ProdutoForm(request.POST, instance=produto) 
-        if form.is_valid(): 
+        if form.is_valid():
+            if form.cleaned_data['preco'] <= 0:
+                form.add_error('preco', 'Insira apenas valores positivos maiores que zero.')
+                return render(request, 'update_produto.html', {'form': form})
             form.save() 
             return redirect('index') 
     else:      

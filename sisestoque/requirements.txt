@@ -1,0 +1,4 @@
+django
+wheel
+django-crispy-forms
+crispy-bulma

@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'saida'
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = ("bulma",)
+
+CRISPY_TEMPLATE_PACK = "bulma"
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -127,3 +132,4 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
