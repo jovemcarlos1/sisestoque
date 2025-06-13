@@ -13,12 +13,9 @@
 
 <body>
     <h1 class="title">SisEstoque</h1>
-    <!-- <a href="{% url 'produto:list_produto' %}">Produtos</a> -->
-    <!-- <a href="{% url 'entrada:list_entrada' %}">Entradas</a>
-    <a href="{% url 'saida:list_saida' %}">Saídas</a> -->
-    <div class="tabs is-toggle">
+    <div class="tabs is-toggled">
       <ul>
-        <li class="is-active">
+        <li>
           <a href="{% url 'produto:list_produto' %}">
             <span class="icon is-small">
               <i class="fa-solid fa-home"></i>
@@ -43,9 +40,6 @@
           </a>
         </li>
       </ul>
-    </div>
-    <div class="navbar-end">
-      <h2 class="subtitle is-5 has-text-primary">Carlos Eduardo - 2025</h2>
     </div>
     {% block product %}{% endblock %}
     <script src="https://example.com/fontawesome/v6.6.0/js/fontawesome.js" data-auto-replace-svg="nest"></script>

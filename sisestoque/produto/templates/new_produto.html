@@ -2,6 +2,7 @@
 {% block product %} 
     <p>Novo produto</p>
     <form action="{% url 'produto:new_produto' %}" method="POST"> 
+        
         {% csrf_token %} 
         {{ form.as_p }} 
     <button class="button is-primary" type="submit">salvar</button>

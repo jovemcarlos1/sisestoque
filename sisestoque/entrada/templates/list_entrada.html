@@ -1,13 +1,12 @@
 {% extends 'base.html' %}{% block product %}
 <h2 class="subtitle">Entradas</h2>
 <a class="button is-primary" href="{% url 'entrada:new_entrada' %}">Novo</a>
-<table class="table is-striped is-hoverable is-fullwidth">
+<table class="table is-striped is-hoverable is-fullwidth is-bordered ">
   <thead>
     <tr>
       <th>Id</th>
       <th>Produto</th>
       <th>Quantidade</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>{% for entrada in entradas %}<tr>
